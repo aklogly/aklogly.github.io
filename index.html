@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Name - Portfolio">
+    <meta name="keywords" content="portfolio, analytics, product, web development, data">
+    <meta name="author" content="Your Name">
+    <title>Your Name - Portfolio</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- AOS Library for animations on scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll to top button -->
+    <div id="scrollTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle">Dark Mode</label>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Header Section with sticky effect -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Your Name</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I specialize in analytics, product development, and web development. Explore my work below.</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item" data-aos="fade-up" onclick="openLightbox();currentSlide(1)">
+                    <img src="project1.jpg" alt="Project 1" loading="lazy">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of what you did for this project.</p>
+                </div>
+                <div class="portfolio-item" data-aos="fade-up" onclick="openLightbox();currentSlide(2)">
+                    <img src="project2.jpg" alt="Project 2" loading="lazy">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of what you did for this project.</p>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for portfolio images -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="lightbox-slide">
+                <img src="project1.jpg" alt="Project 1 Full Size">
+            </div>
+            <div class="lightbox-slide">
+                <img src="project2.jpg" alt="Project 2 Full Size">
+            </div>
+            <!-- Add more lightbox slides here -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Here's where you can introduce yourself, your skills, and your professional background.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/your-email" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <!-- Google reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourhandle"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS and other JS libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
