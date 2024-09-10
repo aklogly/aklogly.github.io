@@ -25,7 +25,12 @@ Welcome to my portfolio website! This is a showcase of my work in analytics, pro
 
 The project is structured as follows:
 
-/ (root directory) ├── index.html # Main HTML file ├── /css │ └── style.css # Stylesheet └── /js └── script.js # JavaScript functionality
+/ (root directory)
+   ├── index.html # Main HTML file
+   ├── /css
+   │      └── style.css # Stylesheet
+   └── /js
+          └── script.js # JavaScript functionality
 
 ## Customization
 
