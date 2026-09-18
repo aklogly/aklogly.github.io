@@ -36,20 +36,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>What data Simon accesses</h2>
     <p>
       Simon connects to five Google accounts I personally own, via a Google Cloud
-      OAuth application I administer. For those accounts, it currently requests:
+      OAuth application I administer. For those accounts, it requests:
     </p>
     <ul class="check">
-      <li><strong>Gmail</strong> (<code>gmail.modify</code> scope) — message content
-        and metadata, to read, search, and (only where explicitly authorized) send or
-        label email. This scope does not permit permanently deleting mail, bypassing
-        Trash.</li>
+      <li><strong>Gmail</strong> (<code>gmail.modify</code>) — message content and
+        metadata, to read, search, and organize mail (labels, archiving, trash/
+        restore), draft messages, and send email where explicitly authorized. Does
+        not permit permanently deleting mail, bypassing Trash.</li>
+      <li><strong>Calendar</strong> (<code>calendar</code>) — event details across
+        connected calendars, to read, and to create, edit, reschedule, or cancel
+        events where explicitly authorized.</li>
+      <li><strong>Drive</strong> (<code>drive</code>) — files across the connected
+        account, to search and read existing files, create new files, and organize,
+        move, or update files where explicitly authorized.</li>
+      <li><strong>Docs</strong> (<code>documents</code>) and <strong>Sheets</strong>
+        (<code>spreadsheets</code>) — to read, create, and edit documents and
+        spreadsheets where explicitly authorized.</li>
+      <li><strong>Contacts</strong> (<code>contacts</code>) — personal contacts, to
+        read, create, and update entries where explicitly authorized.</li>
+      <li><strong>Tasks</strong> (<code>tasks</code>) — task lists and tasks, to read
+        and manage them.</li>
       <li>Basic account identity (<code>email</code>, <code>profile</code>,
         <code>openid</code>) — to confirm which account is connected.</li>
     </ul>
     <p>
-      No other Google data (Calendar, Drive, Sheets, or anything else) is currently
-      requested or accessible through this application. If that changes, this policy
-      and the scopes listed above will be updated first.
+      This is the complete list — no other Google data or product is requested or
+      accessible through this application. If that changes, this policy and the scope
+      list above will be updated first, before the new access is requested.
     </p>
     <p>
       Separately, for my own primary Google account only, I use Google's first-party
@@ -94,6 +107,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <li>Does not use data to train third-party models beyond what's inherent to
         processing a single request through Anthropic's API under its standard
         terms.</li>
+      <li>Does not permanently delete mail, files, contacts, or calendar events unless
+        explicitly authorized for that specific action — routine removals use normal
+        reversible mechanisms (e.g. Gmail Trash) wherever the underlying Google
+        product offers one.</li>
     </ul>
   </section>
 

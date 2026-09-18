@@ -10,8 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <p class="lede">
     Simon is a private, personal productivity system I built and use for my own
-    chief-of-staff work — email triage, task tracking, and daily briefings across
-    accounts I personally own and operate.
+    chief-of-staff work — email, calendar, files, and task tracking across accounts I
+    personally own and operate.
   </p>
 
   <p><strong>This is not a public product.</strong> It isn't available to anyone else, and
@@ -19,14 +19,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section>
     <h2>What Simon does</h2>
+    <p>Across a small set of Google accounts I personally own, Simon is authorized to:</p>
     <ul class="check">
-      <li>Reads, searches, and organizes Gmail across a small set of Google accounts
-        I personally own, to help me track commitments and follow-ups.</li>
-      <li>Occasionally takes actions I've explicitly pre-authorized, such as sending a
-        daily summary email to my own inbox, or labeling/organizing messages.</li>
-      <li>Runs on infrastructure I control, using Anthropic's Claude models to process
-        and reason over that information.</li>
+      <li><strong>Gmail</strong> — read, search, and organize mail (labels, archiving,
+        trash/restore); draft messages; send email only where I've explicitly
+        pre-authorized it.</li>
+      <li><strong>Calendar</strong> — read events across connected calendars; create,
+        edit, reschedule, or cancel events where explicitly authorized.</li>
+      <li><strong>Drive</strong> — search and read existing files; create new files;
+        organize, move, and update files where explicitly authorized.</li>
+      <li><strong>Docs &amp; Sheets</strong> — read, create, and edit documents and
+        spreadsheets where explicitly authorized.</li>
+      <li><strong>Contacts</strong> — read, create, and update personal contacts where
+        explicitly authorized.</li>
+      <li><strong>Tasks</strong> — read and manage task lists and tasks.</li>
     </ul>
+    <p>
+      Runs on infrastructure I control, using Anthropic's Claude models to process and
+      reason over that information.
+    </p>
     <p>
       Separately, for my own primary Google account only, I also use Google's own
       first-party connector for Claude to read Calendar and Drive — that connection is
@@ -45,6 +56,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         providers required to run it.</li>
       <li>Doesn't act on, or gain access to, any account I haven't explicitly
         connected.</li>
+      <li>Doesn't permanently delete mail, files, contacts, or calendar events unless
+        I've explicitly authorized that specific action — routine deletions go through
+        normal reversible mechanisms (e.g. Gmail Trash) wherever the underlying Google
+        product offers one.</li>
     </ul>
   </section>
 
