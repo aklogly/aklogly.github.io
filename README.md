@@ -1,43 +1,31 @@
-# Portfolio Website
+# jloganlyle.com
 
-Welcome to my portfolio website! This is a showcase of my work in analytics, product development, and web development. The website is built from scratch using GitHub Pages and includes several advanced features such as dark mode, a scroll progress bar, and a lightbox for portfolio images.
+Personal site for Logan Lyle — professional hub, selected work, and the public
+homepage/privacy policy for the Simon (Chief of Staff) Google OAuth app.
 
-## Features
+Built with [Astro](https://astro.build) as a static site, deployed to GitHub Pages
+under the custom domain `jloganlyle.com`.
 
-- **Dark Mode Toggle**: Users can switch between light and dark themes for better accessibility and comfort.
-- **Smooth Scroll Progress Bar**: A dynamic progress bar tracks the user's scroll position on the page.
-- **Responsive Design**: The website is mobile-friendly and adjusts to various screen sizes.
-- **Lightbox Gallery**: Portfolio images can be viewed in full size with next/previous navigation.
-- **Form Validation with reCAPTCHA**: The contact form is protected with Google reCAPTCHA to prevent spam.
-- **Lazy Loading**: Images load only when they are about to be viewed, improving page load times.
-- **Local Storage**: The contact form remembers input data in case of accidental page reload.
+## Structure
 
-## Technologies Used
+```
+src/
+  layouts/BaseLayout.astro   shared page shell (nav, footer, meta)
+  components/                Nav, Footer
+  pages/                     one .astro file per route
+  styles/global.css          design tokens + shared styles
+public/                      static assets, CNAME
+```
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6)**
-- **AOS.js** (Animate on Scroll)
-- **Google reCAPTCHA**
-- **GitHub Pages**
+## Local development
 
-## Project Structure
+```
+npm install
+npm run dev       # http://localhost:4321
+npm run build     # outputs to dist/
+```
 
-The project is structured as follows:
+## Deployment
 
-/ (root directory)
-   ├── index.html # Main HTML file
-   ├── /css
-   │      └── style.css # Stylesheet
-   └── /js
-          └── script.js # JavaScript functionality
-
-## Customization
-
-Feel free to fork this repository and customize it for your own use. You can update the content, styles, and functionality to suit your needs.
-
-## License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as long as proper attribution is given.
-
----
+GitHub Pages, built and deployed automatically from `main` via the
+`.github/workflows/deploy.yml` GitHub Actions workflow on every push.

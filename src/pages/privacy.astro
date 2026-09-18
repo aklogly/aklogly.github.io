@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy Policy for Simon, a personal chief-of-staff application built and operated by Logan Lyle."
+>
+  <div class="eyebrow">Privacy Policy</div>
+  <h1>Privacy Policy</h1>
+  <p class="mono" style="color:var(--ink-soft);">
+    Effective date: September 17, 2026
+  </p>
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      Simon is a personal productivity and chief-of-staff automation system built and
+      operated by James Logan Lyle ("I," "me," "my") for personal, non-commercial use.
+      This policy explains what data Simon accesses, how it's used, and how it's
+      protected. It applies only to Simon and to the Google account(s) I personally
+      authorize to connect to it — it is not a public-facing service, and no one else's
+      data is processed without their own explicit authorization.
+    </p>
+  </section>
+
+  <section>
+    <h2>Who can use Simon</h2>
+    <p>
+      Access is limited to Google accounts I personally own or explicitly authorize as
+      the account owner/administrator. It is not distributed, marketed, or made
+      available to the general public.
+    </p>
+  </section>
+
+  <section>
+    <h2>What data Simon accesses</h2>
+    <p>Depending on which Google account and scopes are connected, Simon may access:</p>
+    <ul class="check">
+      <li><strong>Gmail</strong> — message content and metadata, to read, search, and
+        (only where explicitly authorized) send email.</li>
+      <li><strong>Google Calendar</strong> — event details across authorized calendars,
+        to read and (only where explicitly authorized) create or modify events.</li>
+      <li><strong>Google Drive</strong> — files I own or that are shared with me, to
+        read and, in limited cases, create documents.</li>
+    </ul>
+    <p>No data is collected beyond what's needed for the specific productivity workflow
+      it supports.</p>
+  </section>
+
+  <section>
+    <h2>How data is used</h2>
+    <p>
+      Data from connected accounts is used exclusively to power personal productivity
+      workflows I've defined — for example, summarizing my calendar and inbox into a
+      daily briefing, tracking follow-up items, or drafting a message for my own
+      review. Data may be processed by
+      <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic's
+        Claude API</a> as part of these workflows, under Anthropic's own API terms and
+      data-handling commitments.
+    </p>
+  </section>
+
+  <section>
+    <h2>Where data is stored</h2>
+    <p>
+      Retrieved data and derived working state (for example, a list of open follow-up
+      items) are stored on infrastructure I personally control, and are not stored by
+      or shared with any third party beyond the infrastructure and API providers
+      necessary to run the application.
+    </p>
+  </section>
+
+  <section>
+    <h2>What Simon does not do</h2>
+    <ul class="check">
+      <li>Does not sell any data, in any form.</li>
+      <li>Does not use data for advertising or ad targeting.</li>
+      <li>Does not share data with third parties for their own purposes.</li>
+      <li>Does not use data to train third-party models beyond what's inherent to
+        processing a single request through Anthropic's API under its standard
+        terms.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data retention and deletion</h2>
+    <p>
+      Working state derived from connected accounts (for example, a tracked follow-up
+      item) is retained only as long as it's useful to the workflow it supports, and is
+      routinely reviewed and deleted or overwritten as items are resolved. There is no
+      fixed automatic retention schedule; data is deleted promptly on request.
+    </p>
+  </section>
+
+  <section>
+    <h2>Revoking access</h2>
+    <p>
+      Access can be reviewed or revoked at any time via
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+        Google Account → Security → Third-party apps with account access
+      </a>. Revoking access immediately stops Simon from accessing that account going
+      forward; any already-retrieved data is deleted promptly on request.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>
+      If Simon's data practices change materially, this page will be updated and the
+      effective date above will change.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p><a href="mailto:loganlyle55@gmail.com">loganlyle55@gmail.com</a></p>
+  </section>
+</BaseLayout>
