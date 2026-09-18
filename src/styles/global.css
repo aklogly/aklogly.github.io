@@ -102,21 +102,6 @@ ul.check li::before { content: "—"; color: var(--accent); flex: none; }
   margin-block: 1.2rem;
 }
 
-.needs-input {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-  background: var(--accent-2-soft);
-  border: 1px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
-  border-radius: 3px;
-  padding: .15em .5em;
-  margin-left: .4em;
-  vertical-align: middle;
-}
-
 /* site chrome */
 header.site-header {
   border-bottom: 1px solid var(--line);

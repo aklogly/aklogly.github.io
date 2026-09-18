@@ -17,10 +17,6 @@ src/
 public/                      static assets, CNAME
 ```
 
-Pages marked with a `needs-input` badge in the rendered page contain placeholder
-copy pending explicit approval — see the redesign brief for context before
-publishing.
-
 ## Local development
 
 ```
@@ -31,4 +27,5 @@ npm run build     # outputs to dist/
 
 ## Deployment
 
-GitHub Pages, deployed from `main`. Do not merge to `main` without review.
+GitHub Pages, built and deployed automatically from `main` via the
+`.github/workflows/deploy.yml` GitHub Actions workflow on every push.
