@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Simon"
+  description="Simon is a private, personal chief-of-staff productivity system built and operated by Logan Lyle for his own use."
+>
+  <div class="eyebrow">Simon / Chief of Staff</div>
+  <h1>Simon — Personal Chief of Staff</h1>
+
+  <p class="lede">
+    Simon is a private, personal productivity system I built and use for my own
+    chief-of-staff work — calendar, email triage, task tracking, and daily briefings
+    across accounts I personally own and operate.
+  </p>
+
+  <p><strong>This is not a public product.</strong> It isn't available to anyone else, and
+    it doesn't manage data on behalf of anyone other than me.</p>
+
+  <section>
+    <h2>What Simon does</h2>
+    <ul class="check">
+      <li>Reads and organizes information from Google services I've explicitly
+        connected — Gmail, Calendar, and Drive — to help me track commitments,
+        follow-ups, and my schedule.</li>
+      <li>Occasionally takes actions I've explicitly pre-authorized, such as sending a
+        daily summary email to my own inbox.</li>
+      <li>Runs on infrastructure I control, using Anthropic's Claude models to process
+        and reason over that information.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What Simon doesn't do</h2>
+    <ul class="check">
+      <li>Doesn't sell data, in any form, to anyone.</li>
+      <li>Doesn't use data for advertising or build advertising profiles.</li>
+      <li>Doesn't share data with third parties, other than the infrastructure and API
+        providers required to run it.</li>
+      <li>Doesn't act on, or gain access to, any account I haven't explicitly
+        connected.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Access &amp; revocation</h2>
+    <p>
+      Because Simon connects through standard Google OAuth, I can review or revoke its
+      access at any time from my Google Account's
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+        Security → Third-party access
+      </a> settings, the same as any other connected app.
+    </p>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <p>
+      <a href="mailto:hello@jloganlyle.com">hello@jloganlyle.com</a>
+      <span class="needs-input">confirm address</span>
+    </p>
+    <p><a href="/privacy">Read the full Privacy Policy →</a></p>
+  </section>
+</BaseLayout>

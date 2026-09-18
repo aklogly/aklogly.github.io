@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Projects"
+  description="Things I've built — starting with Simon, a private chief-of-staff automation system."
+>
+  <div class="eyebrow">Projects</div>
+  <h1>Things I've built</h1>
+  <p class="lede">Software and systems, not case studies — the things that exist because I built them.</p>
+
+  <div class="entry">
+    <h3>Simon</h3>
+    <p class="role">Personal chief-of-staff system · Multi-agent automation · Ongoing</p>
+    <p>
+      A private AI-driven operations system I designed and run for my own use — calendar,
+      email, and task management with explicit governance and approval boundaries, built
+      on Anthropic's Claude models.
+    </p>
+    <a class="btn outline" href="/simon">About Simon →</a>
+  </div>
+
+  <div class="entry">
+    <h3 style="color:var(--ink-soft);">More coming</h3>
+    <p style="color:var(--ink-soft);">
+      Reserved for product explorations currently in progress.
+      <span class="needs-input">needs input</span>
+    </p>
+  </div>
+</BaseLayout>
