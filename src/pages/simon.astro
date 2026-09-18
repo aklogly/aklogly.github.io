@@ -10,8 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <p class="lede">
     Simon is a private, personal productivity system I built and use for my own
-    chief-of-staff work — calendar, email triage, task tracking, and daily briefings
-    across accounts I personally own and operate.
+    chief-of-staff work — email triage, task tracking, and daily briefings across
+    accounts I personally own and operate.
   </p>
 
   <p><strong>This is not a public product.</strong> It isn't available to anyone else, and
@@ -20,14 +20,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section>
     <h2>What Simon does</h2>
     <ul class="check">
-      <li>Reads and organizes information from Google services I've explicitly
-        connected — Gmail, Calendar, and Drive — to help me track commitments,
-        follow-ups, and my schedule.</li>
+      <li>Reads, searches, and organizes Gmail across a small set of Google accounts
+        I personally own, to help me track commitments and follow-ups.</li>
       <li>Occasionally takes actions I've explicitly pre-authorized, such as sending a
-        daily summary email to my own inbox.</li>
+        daily summary email to my own inbox, or labeling/organizing messages.</li>
       <li>Runs on infrastructure I control, using Anthropic's Claude models to process
         and reason over that information.</li>
     </ul>
+    <p>
+      Separately, for my own primary Google account only, I also use Google's own
+      first-party connector for Claude to read Calendar and Drive — that connection is
+      authorized, governed, and operated directly by
+      <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a>,
+      not by this application, and isn't covered by the scopes described here.
+    </p>
   </section>
 
   <section>

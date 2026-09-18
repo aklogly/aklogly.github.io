@@ -34,15 +34,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section>
     <h2>What data Simon accesses</h2>
-    <p>Depending on which Google account and scopes are connected, Simon may access:</p>
+    <p>
+      Simon connects to five Google accounts I personally own, via a Google Cloud
+      OAuth application I administer. For those accounts, it currently requests:
+    </p>
     <ul class="check">
-      <li><strong>Gmail</strong> — message content and metadata, to read, search, and
-        (only where explicitly authorized) send email.</li>
-      <li><strong>Google Calendar</strong> — event details across authorized calendars,
-        to read and (only where explicitly authorized) create or modify events.</li>
-      <li><strong>Google Drive</strong> — files I own or that are shared with me, to
-        read and, in limited cases, create documents.</li>
+      <li><strong>Gmail</strong> (<code>gmail.modify</code> scope) — message content
+        and metadata, to read, search, and (only where explicitly authorized) send or
+        label email. This scope does not permit permanently deleting mail, bypassing
+        Trash.</li>
+      <li>Basic account identity (<code>email</code>, <code>profile</code>,
+        <code>openid</code>) — to confirm which account is connected.</li>
     </ul>
+    <p>
+      No other Google data (Calendar, Drive, Sheets, or anything else) is currently
+      requested or accessible through this application. If that changes, this policy
+      and the scopes listed above will be updated first.
+    </p>
+    <p>
+      Separately, for my own primary Google account only, I use Google's first-party
+      connector for Claude to read Calendar and Drive data. That connection is a
+      distinct OAuth grant, authorized and operated directly by Anthropic under its own
+      terms — it is not requested or controlled by this application, and is described
+      here only for completeness.
+    </p>
     <p>No data is collected beyond what's needed for the specific productivity workflow
       it supports.</p>
   </section>
@@ -51,9 +66,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>How data is used</h2>
     <p>
       Data from connected accounts is used exclusively to power personal productivity
-      workflows I've defined — for example, summarizing my calendar and inbox into a
-      daily briefing, tracking follow-up items, or drafting a message for my own
-      review. Data may be processed by
+      workflows I've defined — for example, summarizing my inbox into a daily
+      briefing, tracking follow-up items, or drafting a message for my own review.
+      Data may be processed by
       <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic's
         Claude API</a> as part of these workflows, under Anthropic's own API terms and
       data-handling commitments.
